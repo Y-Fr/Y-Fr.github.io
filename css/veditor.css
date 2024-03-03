@@ -292,14 +292,11 @@
 }
 
 @keyframes vbtnanim{
-    0%{
-        background-position: 0% 50%;
+    from{
+        background-position: 0%;
     }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
+    to{
+        background-position: 400%;
     }
 }
 
@@ -311,9 +308,8 @@
     border: 1px solid #ededed;
     border-radius: .3em;
     display: inline-block;
-    background: linear-gradient(228deg, #E684AE 0%,#79CBCA 25%,#77A1D3 50%,#79CBCA 75%,#E684AE 100%);
+    background: linear-gradient(90deg, #E684AE,#79CBCA,#77A1D3,#E684AE);
     background-size: 400%;
-    animation: vbtnanim 5s infinite ease;
     margin-bottom: 0;
     font-weight: 400;
     vertical-align: middle;
@@ -337,6 +333,7 @@
 
 .v[data-class=v] .vbtn:active,
 .v[data-class=v] .vbtn:hover {
+    animation: vbtnanim 8s linear infinite ;
     color: #3090e4;
     border-color: #3090e4;
 }
@@ -376,7 +373,16 @@
 .v[data-class=v] .vcards .vcard {
     padding-top: 1.25em;
     position: relative;
-    display: block
+    display: block;
+    margin: 10px;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+}
+
+.v[data-class=v] .vcards .vcard:hover {
+    margin: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 
 .v[data-class=v] .vcards .vcard:after {
