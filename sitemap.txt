@@ -1,6 +1,6 @@
-https://y-fr.github.io/about/index.html
-https://y-fr.github.io/comment-policy/index.html
 https://y-fr.github.io/2024/02/29/hello-world/
+https://y-fr.github.io/comment-policy/index.html
+https://y-fr.github.io/about/index.html
 https://y-fr.github.io/tag/index.html
 https://y-fr.github.io/gallery/index.html
 https://y-fr.github.io/
