@@ -260,33 +260,61 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="Markdown-渲染功能测试"><a href="#Markdown-渲染功能测试" class="headerlink" title="Markdown 渲染功能测试"></a>Markdown 渲染功能测试</h1><p>这是一个测试 Markdown 渲染功能的文档。Markdown 是一种轻量级标记语言，用于书写格式简单的文档，比如博客文章、README 文件等。</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持多级标题，可以使用 <code>#</code> 符号进行标记。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
-<li>项目 1</li>
-<li>项目 2</li>
-<li>项目 3</li>
+                <h1>Markdown 渲染功能测试</h1>
+<p>这是一个测试 Markdown 渲染功能的文档。Markdown 是一种轻量级标记语言，用于书写格式简单的文档，比如博客文章、README 文件等。</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"># Markdown 渲染功能测试</code></pre>
+<h2 id="标题">标题</h2>
+<p>Markdown 支持多级标题，可以使用 <code>#</code> 符号进行标记。</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">## 标题</code></pre>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>项目 1</p>
+</li>
+<li class="lvl-2">
+<p>项目 2</p>
+</li>
+<li class="lvl-2">
+<p>项目 3</p>
+</li>
 </ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">- 项目 1
+- 项目 2
+- 项目 3</code></pre>
+<h3 id="有序列表">有序列表</h3>
+<ol>
+<li class="lvl-3">
+<p>第一项</p>
+</li>
+<li class="lvl-3">
+<p>第二项</p>
+</li>
+<li class="lvl-3">
+<p>第三项</p>
+</li>
 </ol>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>可以使用 <code>&gt;</code> 符号来创建引用块：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">1. 第一项
+2. 第二项
+3. 第三项</code></pre>
+<h2 id="引用">引用</h2>
+<p>可以使用 <code>&gt;</code> 符号来创建引用块：</p>
 <blockquote>
 <p>这是一个引用块的示例。</p>
 </blockquote>
-<h2 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h2><p><a href="https://y-fr.github.io/">小叶和小汪</a> 欢迎你！</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&gt; 这是一个引用块的示例。</code></pre>
+<h2 id="链接和图片">链接和图片</h2>
+<p><a href="https://y-fr.github.io">小叶和小汪</a> 欢迎你！</p>
 <p><span class="lazyload-outer-wrap" style="width: 100%;"><a class="gallery-item" href="https://y-fr.github.io/img/icon.svg" target="_blank" rel="noopener" ><noscript><img src="https://y-fr.github.io/img/icon.svg" alt="小叶和小汪 Logo"></noscript><span class="lazyload-wrap" data-content="%3Cimg%20src%3D%22https%3A%2F%2Fy-fr.github.io%2Fimg%2Ficon.svg%22%20alt%3D%22%E5%B0%8F%E5%8F%B6%E5%92%8C%E5%B0%8F%E6%B1%AA%20Logo%22%3E" ><span class="placeholder" ></span></span></a><span class="caption">小叶和小汪 Logo</span></span></p>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[小叶和小汪](https:&#x2F;&#x2F;y-fr.github.io) 欢迎你！
 
 ![小叶和小汪 Logo](https:&#x2F;&#x2F;y-fr.github.io&#x2F;img&#x2F;icon.svg)</code></pre>
-
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以使用 ` 单行代码` 或者代码块来显示代码：</p>
+<h2 id="代码">代码</h2>
+<p>可以使用 ` 单行代码` 或者代码块来显示代码：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">def hello_world():
     print(&quot;Hello, world!&quot;)</code></pre>
-
-<h2 id="粗体与斜体"><a href="#粗体与斜体" class="headerlink" title="粗体与斜体"></a>粗体与斜体</h2><p><em>斜体文字</em> 或者 <em>斜体文字</em></p>
+<h2 id="粗体与斜体">粗体与斜体</h2>
+<p><em>斜体文字</em> 或者 <em>斜体文字</em></p>
 <p><strong>粗体文字</strong> 或者 <strong>粗体文字</strong></p>
 <p><em><strong>粗斜体文字</strong></em> 或者 <em><strong>粗斜体文字</strong></em></p>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">*斜体文字* 或者 _斜体文字_
@@ -294,8 +322,8 @@
 **粗体文字** 或者 __粗体文字__
 
 ***粗斜体文字*** 或者 ___粗斜体文字___</code></pre>
-
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<h2 id="表格">表格</h2>
+<table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -303,7 +331,8 @@
 <th>性别</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>小明</td>
 <td>25</td>
 <td>男</td>
@@ -318,22 +347,132 @@
 <td>28</td>
 <td>男</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">| 姓名   | 年龄 | 性别 |
 | ------ | ---- | ---- |
 | 小明   | 25   | 男   |
 | 小红   | 30   | 女   |
 | 小华   | 28   | 男   |</code></pre>
-
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
+<h2 id="分割线">分割线</h2>
 <hr>
 <hr>
-<pre><code class="markdown">---
+<hr>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">---
 
 ***
 
 ___
 </code></pre>
+<h2 id="Markdown拓展（仅Post-Page-Draft可用）">Markdown拓展（仅Post,Page,Draft可用）</h2>
+<h2 id="基础">基础</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>语法</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>markdown-it-abbr</td>
+<td>注释</td>
+<td><code>*[HTML]: 超文本标记语言</code></td>
+<td>*[HTML]: 超文本标记语言</td>
+</tr>
+<tr>
+<td>markdown-it-emoji</td>
+<td>表情</td>
+<td><code>:)</code></td>
+<td>😃</td>
+</tr>
+<tr>
+<td>markdown-it-footnote</td>
+<td>脚注</td>
+<td><code>参考文献[^1]</code></td>
+<td>参考文献[^1]</td>
+</tr>
+<tr>
+<td>markdown-it-ins</td>
+<td>下划线</td>
+<td><code>++下划线++</code></td>
+<td><ins>下划线</ins></td>
+</tr>
+<tr>
+<td>markdown-it-mark</td>
+<td>突出显示</td>
+<td><code>==标记==</code></td>
+<td><mark>标记</mark></td>
+</tr>
+<tr>
+<td>markdown-it-sub</td>
+<td>下标</td>
+<td><code>H~2~O</code></td>
+<td>H<sub>2</sub>O</td>
+</tr>
+<tr>
+<td>markdown-it-sup</td>
+<td>上标</td>
+<td><code>X^2^</code></td>
+<td>X<sup>2</sup></td>
+</tr>
+<tr>
+<td>markdown-it-checkbox</td>
+<td>复选框</td>
+<td>未选：- [ ]<br>选中：- [x]</td>
+<td>未选：- [ ]<br>选中：- [x]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="进阶">进阶</h2>
+<h2 id="自定义图片宽高">自定义图片宽高</h2>
+<p><span class="lazyload-outer-wrap" style="width: 100%;"><a class="gallery-item" href="https://y-fr.github.io/img/icon.svg" target="_blank" rel="noopener" ><noscript><img src="https://y-fr.github.io/img/icon.svg" alt="小叶和小汪 Logo" width="100" height="200"></noscript><span class="lazyload-wrap" data-content="%3Cimg%20src%3D%22https%3A%2F%2Fy-fr.github.io%2Fimg%2Ficon.svg%22%20alt%3D%22%E5%B0%8F%E5%8F%B6%E5%92%8C%E5%B0%8F%E6%B1%AA%20Logo%22%20width%3D%22100%22%20height%3D%22200%22%3E" ><span class="placeholder" ></span></span></a><span class="caption">小叶和小汪 Logo</span></span></p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![小叶和小汪 Logo](https:&#x2F;&#x2F;y-fr.github.io&#x2F;img&#x2F;icon.svg &#x3D;100x200)</code></pre>
+<h2 id="折叠内容">折叠内容</h2>
+<details open>
+<summary><span class="pre-summary">&nbsp;</span><strong>点击折叠</strong></summary><p>这是被隐藏的内容</p>
+</details>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">+++ **点击折叠**
+这是被隐藏的内容
++++</code></pre>
+<h2 id="自定义容器">自定义容器</h2>
+<div class="tips">
+<p><strong>提示</strong><br>
+这是一个提示</p>
+</div>
+<div class="warning">
+<p><strong>注意</strong><br>
+这是一个警告</p>
+</div>
+<div class="danger">
+<p><strong>警告</strong><br>
+这是一个危险信号</p>
+</div>
+<div class="success">
+<p><strong>成功</strong><br>
+这是一个成功信号</p>
+</div>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">::: tips
+**提示**
+这是一个提示
+:::
+
+::: warning
+**注意**
+这是一个警告
+:::
+
+::: danger
+**警告**
+这是一个危险信号
+:::
+
+::: success
+**成功**
+这是一个成功信号
+:::</code></pre>
 
             </div>
 
