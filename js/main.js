@@ -268,14 +268,14 @@
       var d = key.split(".");
       if (mon == d[0] && date == d[1]) {
         iziToast.info({
-          timeout: 140000,
+          timeout: 14000,
           closeOnEscape: "true",
-          transitionOut: "fadeOutRight",
+          transitionOut: "fadeOutUp",
           layout: "2",
-          transitionIn: "bounceInLeft",
-          position: "topRight",
+          transitionIn: "bounceInDown",
+          position: "topCenter",
           icon: (days[key][2]=="")?"icon fa-calendar":days[key][2],
-          backgroundColor: "#fff",
+          backgroundColor: "#ffffff",
           title: days[key][0],
           message:days[key][1],
         });
@@ -300,3 +300,4 @@
     };
   });
 })(jQuery);
+//NCFXQXMWOUNOCLJD
