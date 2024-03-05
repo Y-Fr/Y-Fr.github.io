@@ -236,8 +236,9 @@
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
 			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+			transition: filter 0.4s ease, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
 			opacity: 0;
+			filter: blur(8px);
 			visibility: hidden;
 		}
 
@@ -2289,6 +2290,8 @@
 					position: relative;
 					float: right;
 					height: 100%;
+					transform-style: preserve-3d;
+					perspective: 500px;
 				}
 
 					#me .pic img {
@@ -2296,6 +2299,11 @@
 						display: block;
 						border-radius:5px;
 						height: 100%;
+						margin: auto;
+						background: #000;
+						border-radius: 10px;
+						transform-style: preserve-3d;
+						transition: all .1s;
 					}
 
 					#me .pic .arrow {
@@ -2421,13 +2429,21 @@
 			#me .pic {
 				width: 100%;
 				padding-bottom: 1rem;
-				
+				display: flex;
+				justify-content: center;
+				transform-style: preserve-3d;
+				perspective: 500px;
 			}
 
 				#me .pic img {
 					display: block;
 					border-radius:5px;
-					width: 100%;
+					width: 80%;
+					margin: auto;
+					background: #000;
+					border-radius: 10px;
+					transform-style: preserve-3d;
+					transition: all .1s;
 				}
 
 				#me .pic .arrow {
