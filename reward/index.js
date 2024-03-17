@@ -88,44 +88,24 @@ AV.init({
   serverURL: 'https://y-fr.github.io',
 });
 
-// 创建一个TestObject的表
-var TestObject = AV.Object.extend('TestObject');
+// 声明 class
+const RewardDataBase = AV.Object.extend("RewardDataBase");
 
-// 创建一行数据
-var testObject = new TestObject();
+// 构建对象
+const rdb = new RewardDataBase();
 
-// 存储信息
-testObject.save({
-    words: 'Hello World!'
-}).then(function(object) {
-    alert('LeanCloud Rocks!');
-})
-/*
-const TestObject = AV.Object.extend("TestObject");
-const testObject = new TestObject();
-testObject.set("words", "Hello world!");
-testObject.save().then((testObject) => {
-  console.log("保存成功。");
-});
- */
-//getDatabase();
+// 为属性赋值
+rdb.set("title", "工程师周会");
+rdb.set("content", "周二两点，全体成员");
 
-//获取数据库函数
-function getDatabase(){
-    const query = new AV.Query('RewardDataBase');
-    query.descending('createdAt'); // 按照时间戳倒序排列
-    query.limit(1); // 限制查询结果数量为1
-    query.find().then((results) => {
-      if (results.length > 0) {
-        const latestData = results[0];
-        console.log('最新的一行数据：', latestData.toJSON());
-      } else {
-        console.log('未找到数据。');
-      }
-    }).catch((error) => {
-      console.error('查询失败：', error);
-    });
-    
-}
-
+// 将对象保存到云端
+rdb.save().then(
+  (rdb) => {
+    // 成功保存之后，执行其他逻辑
+    console.log(`保存成功。objectId：${rdb.id}`);
+  },
+  (error) => {
+    // 异常处理
+  }
+);
 
