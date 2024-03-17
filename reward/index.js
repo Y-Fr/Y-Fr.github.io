@@ -81,29 +81,34 @@ while(not my_input == "exit"):
 
 //初始化Leancloud
 // 使用 localStorage 作为存储适配器
-const storageAdapter = {
-  async getItemAsync(key) {
-    return localStorage.getItem(key);
-  },
-  async setItemAsync(key, value) {
-    return localStorage.setItem(key, value);
-  },
-  async removeItemAsync(key) {
-    return localStorage.removeItem(key);
-  },
-};
 
-
-const APP_ID = 'qwUdSwIm8YI1ilHhjiqIkGap-gzGzoHsz';
-const APP_KEY = 'ToJcW1bIMIeMc0ZQ4fYzoMIa';
 AV.init({
-  appId: APP_ID,
-  appKey: APP_KEY,
+  appId: "qwUdSwIm8YI1ilHhjiqIkGap-gzGzoHsz",
+  appKey: "ToJcW1bIMIeMc0ZQ4fYzoMIa",
   serverURL: 'https://y-fr.github.io',
-  storage: storageAdapter, // 配置存储适配器
 });
 
-getDatabase();
+// 创建一个TestObject的表
+var TestObject = AV.Object.extend('TestObject');
+
+// 创建一行数据
+var testObject = new TestObject();
+
+// 存储信息
+testObject.save({
+    words: 'Hello World!'
+}).then(function(object) {
+    alert('LeanCloud Rocks!');
+})
+/*
+const TestObject = AV.Object.extend("TestObject");
+const testObject = new TestObject();
+testObject.set("words", "Hello world!");
+testObject.save().then((testObject) => {
+  console.log("保存成功。");
+});
+ */
+//getDatabase();
 
 //获取数据库函数
 function getDatabase(){
