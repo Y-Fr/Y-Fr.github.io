@@ -88,24 +88,122 @@ AV.init({
   serverURL: 'https://leancloud.cn',
 });
 console.log(window.AV)
+
+//声明class
+//misson
+
+
 // 声明 class
-const RewardDataBase = AV.Object.extend("RewardDataBase");
 
 // 构建对象
-const rdb = new RewardDataBase();
 
-// 为属性赋值
-rdb.set("title", "工程师周会");
-rdb.set("content", "周二两点，全体成员");
+// 读取玩家数据,level,exp,mission,day
+var level=0;
+var exp=0;
+var missions = [];
+var startdate=Date.now();
+var mission_done_today = 0;
 
-// 将对象保存到云端
-rdb.save().then(
-  (rdb) => {
-    // 成功保存之后，执行其他逻辑
+const syncButton = document.getElementById('sync');
+//const objectId_input = document.getElementById('objectid_input');
+
+function syncData(){
+  const query = new AV.Query("RewardDataBase");
+  var objectId_in = document.getElementById('objectid_input').value;
+  query.equalTo("objectId", objectId_in);
+  query.find().then(
+    (rdb) => 
+    {
+      if(rdb.length==0)
+      {
+        console.log("没有找到数据,新建");
+        level=0;
+        exp=0;
+        missions = [];
+        startdate=Date.now();
+        mission_done_today = 0;
+        saveData().then((newId) => {
+          document.getElementById('objectid_input').value = newId;
+          syncData();
+        }).catch((error) => {
+          console.log(error);
+        });    }
+      else
+      {
+        query.get(objectId_in).then((rdb) => {
+          level = rdb.get("level");
+          exp = rdb.get("exp");
+          //将mission      
+          // 更新页面
+          document.getElementById('level').innerText = level;
+          document.getElementById('exp').innerText = exp;
+          missions = rdb.get("mission");
+          populateMissionTable();
+        });
+      }
+    }
+  );
+}
+
+
+function populateMissionTable() {
+  var tableBody = document.getElementById("missionTableBody");
+  tableBody.innerHTML = ""; // Clear existing table body content
+  
+  // Loop through mission data and create table rows
+  missions.forEach(function(mission) {
+    var row = document.createElement("tr");
+    var missionNameCell = document.createElement("td");
+    missionNameCell.textContent = mission[0];
+    var difficultyCell = document.createElement("td");
+    difficultyCell.textContent = mission[1];
+    
+    row.appendChild(missionNameCell);
+    row.appendChild(difficultyCell);
+    
+    tableBody.appendChild(row);
+  });
+}
+function addMission() {
+  var table = document.getElementById("AddmissionTable");
+  var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = '<input type="text" name="missionName">';
+  cell2.innerHTML = `
+<select name="difficulty">
+<option value="1">简单</option>
+<option value="2">普通</option>
+<option value="3">困难</option>
+<option value="4">艰巨</option>
+</select>`;
+}
+
+
+function saveData(){
+  // 构建对象
+  const RewardDataBase = AV.Object.extend("RewardDataBase");
+  const rdb = new RewardDataBase();
+  rdb.set("level", level);
+  rdb.set("exp", exp);
+  rdb.set("mission", mission);
+  rdb.set("startdate", startdate);
+  /**
+  rdb.save().then((rdb) => {
     console.log(`保存成功。objectId：${rdb.id}`);
-  },
-  (error) => {
-    // 异常处理
-  }
-);
+  }, (error) => {
+    console.log(error);
+  });
+   */
+    // 返回一个 Promise 对象
+    return rdb.save().then((rdb) => {
+      console.log(`保存成功。objectId：${rdb.id}`);
+      return rdb.id; // 在保存成功后返回 rdb.id
+    }).catch((error) => {
+      console.log(error);
+    });
+}
+
+
+
 

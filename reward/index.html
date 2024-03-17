@@ -165,6 +165,7 @@
       <div class="typo" style="padding: 3rem"><!--静态网页版YFR-Rewards，数据与Leancloud交互-->
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>YFR-Rewards</title>
@@ -366,19 +367,87 @@ while(not my_input == "exit"):
         <h1>YFR-Rewards</h1>
         <div class="main">
             <div class="input">
-                <input type="text" id="input" placeholder="输入任务难度">
-                <button id="add">添加</button>
+                <input type="text" id="objectid_input" placeholder="输入ID">
+                <!-- 按钮，点击后同步数据-->
+                <button onclick="syncData()" id="sync">同步</button>
             </div>
-            <div class="list">
-                <ul id="list">
-                </ul>
-            </div>
-            <div class="result">
-                <p>今日任务难度</p>
-                <p id="result">0</p>
+            <div>
+                <!--显示个人信息level,exp/upgradeneeded,listofmisson,level_day-->
+                <div class="info">
+                    <div class="level">
+                        <h2>等级</h2>
+                        <p id="level">1</p>
+                    </div>
+                    <div class="exp">
+                        <h2>经验值/升级所需经验</h2>
+                        <p id="exp">
+                    </div>
+                    <div class="listofmisson">
+                        <h2>目标列表</h2>
+                        <table id="missionTable">
+                            <thead>
+                                <tr>
+                                    <th>Mission Name</th>
+                                    <th>Difficulty</th>
+                                </tr>
+                            </thead>
+                            <tbody id="missionTableBody">
+                                <!-- Mission data will be added here dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="level_day">
+                        <h2>等级/天数</h2>
+                        <p id="level_day">1/0</p>
+                    </div>
+                    <div>
+                        <h2>Mission Form</h2>
+
+                        <button onclick="addMission()">Add Mission</button>
+
+                        <form id="missionForm">
+                            <table id="AddmissionTable">
+                                <tr>
+                                    <th>Mission Name</th>
+                                    <th>Difficulty</th>
+                                </tr>
+                            </table>
+                            <input type="submit" value="Submit">
+                        </form>
+
+                        <script>
+
+
+                            document.getElementById("missionForm").addEventListener("submit", function (event) {
+                                event.preventDefault();
+                                var formData = []; // 在循环外定义 formData 数组
+                                var table = document.getElementById("AddmissionTable");
+                                for (var i = 1; i < table.rows.length; i++) {
+                                    var missionName = table.rows[i].cells[0].querySelector("input").value;
+                                    var difficulty = table.rows[i].cells[1].querySelector("select").value;
+                                    formData.push([missionName, parseInt(difficulty)]);
+                                }
+                                console.log(formData);
+                                missions = missions.concat(formData); // 使用 concat() 方法将 formData 数组添加到 missions 中
+                                populateMissionTable();
+                                //document.getElementById("AddmissionTable").innerHTML = "";
+                                clearTableBody();
+                            });
+
+                            function clearTableBody() {
+                                var table = document.getElementById("AddmissionTable");
+                                var tbody = table.getElementsByTagName("tbody")[0]; // 获取表格的 tbody 元素
+                                var rows = tbody.getElementsByTagName("tr");
+                                for (var i = rows.length - 1; i > 0; i--) {
+                                    tbody.removeChild(rows[i]); // 删除除第一个 tr 以外的所有 tr
+                                }
+                            }
+
+                        </script>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
 </html></div>
       <p
