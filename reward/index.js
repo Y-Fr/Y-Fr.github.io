@@ -85,9 +85,9 @@ while(not my_input == "exit"):
 AV.init({
   appId: "qwUdSwIm8YI1ilHhjiqIkGap-gzGzoHsz",
   appKey: "ToJcW1bIMIeMc0ZQ4fYzoMIa",
-  serverURL: 'https://y-fr.github.io',
+  //serverURL: 'https://y-fr.github.io',
 });
-
+console.log(window.AV)
 // 声明 class
 const RewardDataBase = AV.Object.extend("RewardDataBase");
 
