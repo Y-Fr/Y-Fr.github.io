@@ -252,11 +252,9 @@
 	var age_y = year - 2005;
 	var age_w = year - 2004;
 	var y_anni = year - 2023;
-	dic={'a':1,'b':2,'c':3}
-    var days = {
+  var days = {
 			"1.1": ["今天是元旦节，也是小叶的生日！", `快去为她送上祝福吧！${age_y}岁生日快乐，小叶！`,"icon fa-birthday-cake"],
 			"2.14": ["情人节快乐!","愿天下有情人终成眷属","icon fa-heart"],
-			"3.5":["测试日期",`测试描述${age_y},${y_anni},${age_w}`,""],
 			"5.20": ["520","","icon fa-heart"],
 			"5.21": ["521","","icon fa-heart"],
 			"6.9": ["周年纪念日",`小叶和小汪在一起已经${y_anni}年了！`,"icon fa-birthday-cake"],

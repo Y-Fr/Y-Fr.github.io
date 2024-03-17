@@ -175,27 +175,25 @@
  }
  </script>
   <link rel="preload" as="image" href="http://y-fr.github.io/images/puff.svg" /><link rel="preload" as="image" href="https://i.loli.wiki/public/240201/error-tip.svg" /></head>
-   
-<!-- Layouts -->
-
+   <!-- Layouts -->
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 
 <!-- 文章页 -->
 <body class="is-loading">
-    <!-- Wrapper 外包 s-->
-    <noscript><style>.lazyload-wrap {display: none;}</style></noscript><div id="wrapper" class="fade-in">
-        <!-- Intro 头部显示 s -->
-        <!-- Intro 头部显示 e -->
-        <!-- Header 头部logo start -->
-        <header id="header">
+  <!-- Wrapper 外包 s-->
+  <noscript><style>.lazyload-wrap {display: none;}</style></noscript><div id="wrapper" class="fade-in">
+    <!-- Intro 头部显示 s -->
+    <!-- Intro 头部显示 e -->
+    <!-- Header 头部logo start -->
+    <header id="header">
     <a href="/" class="logo">小叶和小汪</a>
 </header>
-        <!-- Nav 导航条 start -->
-        <nav id="nav" class="special" >
+    <!-- Nav 导航条 start -->
+    <nav id="nav" class="special" >
             <ul class="menu links" >
 			<!-- Homepage  主页  --> 
 			<li >
@@ -257,18 +255,30 @@
 			</ul>
 </nav>
 
-        <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://y-fr.github.io/images/Markdown-FB.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Markdown渲染功能测试</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                <h1>Markdown 渲染功能测试</h1>
+    <div id="main">
+      <div
+        class="post_page_title_img"
+        style="
+          height: 25rem;
+          background-image: url(https://y-fr.github.io/images/Markdown-FB.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          -moz-background-size: cover;
+          overflow: hidden;
+        "
+      >
+        <a href="#" style="padding: 4rem 4rem 2rem 4rem"
+          ><h2>Markdown渲染功能测试</h2></a
+        >
+      </div>
+      <!-- Post -->
+      <div class="typo" style="padding: 3rem"><h1>Markdown 渲染功能测试</h1>
 <p>这是一个测试 Markdown 渲染功能的文档。Markdown 是一种轻量级标记语言，用于书写格式简单的文档，比如博客文章、README 文件等。</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"># Markdown 渲染功能测试</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> Markdown 渲染功能测试</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="标题">标题</h2>
 <p>Markdown 支持多级标题，可以使用 <code>#</code> 符号进行标记。</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">## 标题</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="列表">列表</h2>
 <h3 id="无序列表">无序列表</h3>
 <ul class="lvl-0">
@@ -282,9 +292,9 @@
 <p>项目 3</p>
 </li>
 </ul>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">- 项目 1
-- 项目 2
-- 项目 3</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">-</span> 项目 1
+<span class="token list punctuation">-</span> 项目 2
+<span class="token list punctuation">-</span> 项目 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="有序列表">有序列表</h3>
 <ol>
 <li class="lvl-3">
@@ -297,34 +307,34 @@
 <p>第三项</p>
 </li>
 </ol>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">1. 第一项
-2. 第二项
-3. 第三项</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> 第一项
+<span class="token list punctuation">2.</span> 第二项
+<span class="token list punctuation">3.</span> 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="引用">引用</h2>
 <p>可以使用 <code>&gt;</code> 符号来创建引用块：</p>
 <blockquote>
 <p>这是一个引用块的示例。</p>
 </blockquote>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&gt; 这是一个引用块的示例。</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> 这是一个引用块的示例。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="链接和图片">链接和图片</h2>
 <p><a href="https://y-fr.github.io">小叶和小汪</a> 欢迎你！</p>
 <p><span class="lazyload-outer-wrap" style="width: 100%;"><a class="gallery-item" href="https://y-fr.github.io/img/icon.svg" target="_blank" rel="noopener" ><noscript><img src="https://y-fr.github.io/img/icon.svg" alt="小叶和小汪 Logo"></noscript><span class="lazyload-wrap" data-content="%3Cimg%20src%3D%22https%3A%2F%2Fy-fr.github.io%2Fimg%2Ficon.svg%22%20alt%3D%22%E5%B0%8F%E5%8F%B6%E5%92%8C%E5%B0%8F%E6%B1%AA%20Logo%22%3E" ><span class="placeholder" ></span></span></a><span class="caption">小叶和小汪 Logo</span></span></p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">[小叶和小汪](https:&#x2F;&#x2F;y-fr.github.io) 欢迎你！
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">小叶和小汪</span>](<span class="token url">https://y-fr.github.io</span>)</span> 欢迎你！
 
-![小叶和小汪 Logo](https:&#x2F;&#x2F;y-fr.github.io&#x2F;img&#x2F;icon.svg)</code></pre>
+<span class="token url"><span class="token operator">!</span>[<span class="token content">小叶和小汪 Logo</span>](<span class="token url">https://y-fr.github.io/img/icon.svg</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="代码">代码</h2>
 <p>可以使用 ` 单行代码` 或者代码块来显示代码：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">def hello_world():
-    print(&quot;Hello, world!&quot;)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="粗体与斜体">粗体与斜体</h2>
 <p><em>斜体文字</em> 或者 <em>斜体文字</em></p>
 <p><strong>粗体文字</strong> 或者 <strong>粗体文字</strong></p>
 <p><em><strong>粗斜体文字</strong></em> 或者 <em><strong>粗斜体文字</strong></em></p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">*斜体文字* 或者 _斜体文字_
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文字</span><span class="token punctuation">*</span></span> 或者 <span class="token italic"><span class="token punctuation">_</span><span class="token content">斜体文字</span><span class="token punctuation">_</span></span>
 
-**粗体文字** 或者 __粗体文字__
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">粗体文字</span><span class="token punctuation">**</span></span> 或者 <span class="token bold"><span class="token punctuation">__</span><span class="token content">粗体文字</span><span class="token punctuation">__</span></span>
 
-***粗斜体文字*** 或者 ___粗斜体文字___</code></pre>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">粗斜体文字</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span> 或者 <span class="token bold"><span class="token punctuation">__</span><span class="token content"><span class="token italic"><span class="token punctuation">_</span><span class="token content">粗斜体文字</span><span class="token punctuation">_</span></span></span><span class="token punctuation">__</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="表格">表格</h2>
 <table>
 <thead>
@@ -352,21 +362,21 @@
 </tr>
 </tbody>
 </table>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">| 姓名   | 年龄 | 性别 |
-| ------ | ---- | ---- |
-| 小明   | 25   | 男   |
-| 小红   | 30   | 女   |
-| 小华   | 28   | 男   |</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 姓名   </span><span class="token punctuation">|</span><span class="token table-header important"> 年龄 </span><span class="token punctuation">|</span><span class="token table-header important"> 性别 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span> <span class="token punctuation">------</span> <span class="token punctuation">|</span> <span class="token punctuation">----</span> <span class="token punctuation">|</span> <span class="token punctuation">----</span> <span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 小明   </span><span class="token punctuation">|</span><span class="token table-data"> 25   </span><span class="token punctuation">|</span><span class="token table-data"> 男   </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data"> 小红   </span><span class="token punctuation">|</span><span class="token table-data"> 30   </span><span class="token punctuation">|</span><span class="token table-data"> 女   </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data"> 小华   </span><span class="token punctuation">|</span><span class="token table-data"> 28   </span><span class="token punctuation">|</span><span class="token table-data"> 男   </span><span class="token punctuation">|</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="分割线">分割线</h2>
 <hr>
 <hr>
 <hr>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">---
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
 
-***
+<span class="token hr punctuation">***</span>
 
 ___
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Markdown拓展（仅Post-Page-Draft可用）">Markdown拓展（仅Post,Page,Draft可用）</h2>
 <h2 id="基础">基础</h2>
 <table>
@@ -382,8 +392,8 @@ ___
 <tr>
 <td>markdown-it-abbr</td>
 <td>注释</td>
-<td><code>*[HTML]: 超文本标记语言</code></td>
-<td>*[HTML]: 超文本标记语言</td>
+<td><code>*[HTML]: &lt;a href=&quot;https://y-fr.github.io&quot;&gt;超文本link&lt;/a&gt;</code></td>
+<td>*[HTML]:<a href="https://y-fr.github.io">超文本link</a></td>
 </tr>
 <tr>
 <td>markdown-it-emoji</td>
@@ -424,22 +434,35 @@ ___
 <tr>
 <td>markdown-it-checkbox</td>
 <td>复选框</td>
-<td>未选：- [ ]<br>选中：- [x]</td>
-<td>未选：- [ ]<br>选中：- [x]</td>
+<td>- [ ]未选<br>- [x]选中</td>
+<td>见下方</td>
 </tr>
 </tbody>
 </table>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">选中</label></p>
+</li>
+<li class="lvl-2">
+<p><input type="checkbox" id="checkbox1"><label for="checkbox1">未选</label></p>
+</li>
+</ul>
 <h2 id="进阶">进阶</h2>
 <h2 id="自定义图片宽高">自定义图片宽高</h2>
 <p><span class="lazyload-outer-wrap" style="width: 100%;"><a class="gallery-item" href="https://y-fr.github.io/img/icon.svg" target="_blank" rel="noopener" ><noscript><img src="https://y-fr.github.io/img/icon.svg" alt="小叶和小汪 Logo " width="100" height="200"></noscript><span class="lazyload-wrap" data-content="%3Cimg%20src%3D%22https%3A%2F%2Fy-fr.github.io%2Fimg%2Ficon.svg%22%20alt%3D%22%E5%B0%8F%E5%8F%B6%E5%92%8C%E5%B0%8F%E6%B1%AA%20Logo%20%24placeholder%3Dblurhash%3ALNFs%23%2BtRE3RP%3F%5EaeMybb%3BLV%40NHoz%3Dplaceholder%22%20width%3D%22100%22%20height%3D%22200%22%3E" ><span class="placeholder" ></span></span></a><span class="caption">小叶和小汪 Logo</span></span></p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![小叶和小汪 Logo $placeholder&#x3D;blurhash:LNFs#+tRE3RP?^aeMybb;LV@NHoz&#x3D;placeholder](https:&#x2F;&#x2F;y-fr.github.io&#x2F;img&#x2F;icon.svg &#x3D;100x200)</code></pre>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">![小叶和小汪 Logo $placeholder=blurhash:LNFs#+tRE3RP?^aeMybb;LV@NHoz=placeholder](https://y-fr.github.io/img/icon.svg =100x200)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<div class="tips">
+<p><strong>使用BlurHash</strong><br>
+在标签内添加 $placeholder=blurhash:图片的BlurHash=placeholder 可以给未加载完毕的图片添加占位图</p>
+<p><a target="_blank" rel="noopener" href="https://blurha.sh/">点我了解BlurHash</a></p>
+</div>
 <h2 id="折叠内容">折叠内容</h2>
 <details open>
 <summary><span class="pre-summary">&nbsp;</span><strong>点击折叠</strong></summary><p>这是被隐藏的内容</p>
 </details>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">+++ **点击折叠**
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">+++ <span class="token bold"><span class="token punctuation">**</span><span class="token content">点击折叠</span><span class="token punctuation">**</span></span>
 这是被隐藏的内容
-+++</code></pre>
++++<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="自定义容器">自定义容器</h2>
 <div class="tips">
 <p><strong>提示</strong><br>
@@ -458,29 +481,61 @@ ___
 这是一个成功信号</p>
 </div>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">::: tips
-**提示**
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">提示</span><span class="token punctuation">**</span></span>
 这是一个提示
 :::
 
 ::: warning
-**注意**
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">注意</span><span class="token punctuation">**</span></span>
 这是一个警告
 :::
 
 ::: danger
-**警告**
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">警告</span><span class="token punctuation">**</span></span>
 这是一个危险信号
 :::
 
 ::: success
-**成功**
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">成功</span><span class="token punctuation">**</span></span>
 这是一个成功信号
-:::</code></pre>
-
-            </div>
-
-            <!-- Post Comments -->
-            
+:::<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</div>
+      <p
+      style="background-image: linear-gradient(45deg, #ffffff, #f1fffb 75%, #ffffff);">
+        <a
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+          target="_blank"
+          rel="license noopener noreferrer"
+          style="display: inline-block"
+          >CC BY-NC-SA 4.0<img
+            style="
+              height: 22px !important;
+              margin-left: 3px;
+              vertical-align: text-bottom;
+            "
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+            style="
+              height: 22px !important;
+              margin-left: 3px;
+              vertical-align: text-bottom;
+            "
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
+            style="
+              height: 22px !important;
+              margin-left: 3px;
+              vertical-align: text-bottom;
+            "
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /><img
+            style="
+              height: 22px !important;
+              margin-left: 3px;
+              vertical-align: text-bottom;
+            "
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+        /></a>
+      </p>
+      <!-- Post Comments -->
+      
     <!-- 使用 valine -->
 <div id="comment">
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -533,10 +588,9 @@ ___
     }
 </style>
 
-
-        </div>
-        <!-- Copyright 版权 start -->
-                <div id="copyright">
+    </div>
+    <!-- Copyright 版权 start -->
+            <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
                 <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
@@ -545,7 +599,7 @@ ___
                 <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
-    </div>
+  </div>
 <script>"use strict";!function(){function S(e){return~~(1227e-8<e?q*H(e,.416666)-13.025:e*U+1)}function T(e){for(e+=M/2;M<e;)e-=n;var t=1.27323954*e-.405284735*O(e);return.225*(O(t)-t)+t}var o="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%*+,-.:;=?@[]^_{|}~",x=function(e,t,n){for(var r=0;t<n;)r=(r*=83)+o.indexOf(e[t++]);return r},H=Math.pow,M=Math.PI,n=2*M,U=3294.6,q=269.025,O=function(e){return(e<0?-1:1)*e*e};function e(e,t,n,r){for(var o,a,d,i,c,l,s,u,p=x(e,0,1),h=p%9+1,f=1+~~(p/9),v=h*f,m=0,w=0,g=0,C=0,y=0,b=0,I=0,L=(x(e,1,2)+1)/13446*(1|r),D=new Float64Array(3*v),E=[(p=x(p=e,2,6))>>16,p>>8&255,255&p],m=0;m<3;m++)D[m]=10.31475<(u=E[m])?H(u/q+.052132,2.4):u/U;for(m=1;m<v;m++)s=x(e,4+2*m,6+2*m),D[3*m]=O(~~(s/361)-9)*L,D[3*m+1]=O(~~(s/19)%19-9)*L,D[3*m+2]=O(s%19-9)*L;for(var A=4*t,R=new Uint8ClampedArray(A*n),C=0;C<n;C++)for(c=M*C/n,g=0;g<t;g++){for(l=M*g/t,w=I=b=y=0;w<f;w++)for(a=T(c*w),m=0;m<h;m++)o=T(l*m)*a,y+=D[d=3*(m+w*h)]*o,b+=D[1+d]*o,I+=D[2+d]*o;R[i=4*g+C*A]=S(y),R[1+i]=S(b),R[2+i]=S(I),R[3+i]=255}return R}"undefined"!=typeof window&&(window.blurhash={decodeBlurHash:e})}(),function(){if("undefined"!=typeof window){var d=function(e){var t=document.createElement("div");return t.innerHTML=e,t.classList.add("inner-wrap"),t},e=function(e){var t,n,r=document.createElement("div"),o=decodeURIComponent(e.dataset.content).replace("<img","<div"),o=(r.innerHTML=o,r.children[0]),r=function(e){var t={};if(!e)return"";try{var n=/\$placeholder=(\S+)=placeholder/gi.exec(e);n&&n[1]&&(t.placeholderImage=n[1])}catch(e){console.log(e)}return t}(o.getAttribute("alt")),o=o.dataset.placeholderimg||r.placeholderImage;o&&/blurhash:/.test(o)&&(r=document.createElement("canvas"),o=blurhash.decodeBlurHash(o.replace("blurhash:",""),32,32),t=r.getContext("2d"),r.width=32,r.height=32,(n=t.createImageData(32,32)).data.set(o),t.putImageData(n,0,0),o=r,e.children[0].appendChild(o)),e.dataset.content=e.dataset.content.replace(/%24placeholder%3D(\S+)%3Dplaceholder/gi,"").replace(/%24aspect-ratio%3D(\S+)%3Daspect-ratio/gi,"")},r=function(n){function r(e){n.classList.remove("loaded"),e.preventDefault(),e.stopPropagation(),(e=n.querySelectorAll(".error-wrap")[0])&&n.removeChild(e),e=n.children[1],n.removeChild(e),e=d(t),o(e),a(e),n.appendChild(e)}var t=decodeURIComponent(n.dataset.content),e=d(t),o=function(e){e.children[0].onload=function(){setTimeout(function(){n.classList.add("loaded")},100);var e=n.querySelectorAll(".error-wrap")[0];e&&n.removeChild(e)},e.ontransitionend=function(){n.children[0].classList.add("loaded")},/<video/.test(t)&&setTimeout(function(){n.classList.add("loaded")},100)},a=function(e){e.children[0].onerror=function(){var e=document.createElement("div"),t=(e.classList.add("error-wrap"),document.createElement("span")),t=(t.classList.add("error-tip"),e.appendChild(t),document.createElement("button"));t.innerText="Retry",t.classList.add("retry-btn"),t.onclick=r,e.appendChild(t),n.appendChild(e)}};o(e),a(e),n.appendChild(e)},t=document.querySelectorAll(".lazyload-wrap");if(window.IntersectionObserver)for(var n,o,a=0;a<t.length;a++)e(c=t[a]),!function(t){var n=new IntersectionObserver(function(e){e.forEach(function(e){e.intersectionRatio>=window.$lazyload.intersectionRatio&&(r(t),n.disconnect())})},{root:document,threshold:[0,.2,.4,.6,.8,1]});n.observe(t)}(c);else for(var i=0;i<t.length;i++){var c=t[i];n=c,o=void 0,o=decodeURIComponent(n.dataset.content),n.appendChild(d(o))}}}();</script></body>
 
 
