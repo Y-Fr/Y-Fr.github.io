@@ -97,7 +97,7 @@ console.log(window.AV)
 
 // 构建对象
 
-// 读取玩家数据,level,exp,mission,day
+// 读取玩家数据,level,exp,missions,day
 var level=0;
 var exp=0;
 var missions = [];
@@ -117,12 +117,12 @@ function syncData(){
       if(rdb.length==0)
       {
         console.log("没有找到数据,新建");
-        level=0;
+        level=1;
         exp=0;
         missions = [];
         startdate=Date.now();
         mission_done_today = 0;
-        saveData().then((newId) => {
+        NewData().then((newId) => {
           document.getElementById('objectid_input').value = newId;
           syncData();
         }).catch((error) => {
@@ -133,11 +133,11 @@ function syncData(){
         query.get(objectId_in).then((rdb) => {
           level = rdb.get("level");
           exp = rdb.get("exp");
-          //将mission      
+          //将missions      
           // 更新页面
           document.getElementById('level').innerText = level;
           document.getElementById('exp').innerText = exp;
-          missions = rdb.get("mission");
+          missions = rdb.get("missions");
           populateMissionTable();
         });
       }
@@ -151,12 +151,12 @@ function populateMissionTable() {
   tableBody.innerHTML = ""; // Clear existing table body content
   
   // Loop through mission data and create table rows
-  missions.forEach(function(mission) {
+  missions.forEach(function(missions) {
     var row = document.createElement("tr");
     var missionNameCell = document.createElement("td");
-    missionNameCell.textContent = mission[0];
+    missionNameCell.textContent = missions[0];
     var difficultyCell = document.createElement("td");
-    difficultyCell.textContent = mission[1];
+    difficultyCell.textContent = missions[1];
     
     row.appendChild(missionNameCell);
     row.appendChild(difficultyCell);
@@ -180,13 +180,13 @@ function addMission() {
 }
 
 
-function saveData(){
+function NewData(){
   // 构建对象
   const RewardDataBase = AV.Object.extend("RewardDataBase");
   const rdb = new RewardDataBase();
   rdb.set("level", level);
   rdb.set("exp", exp);
-  rdb.set("mission", mission);
+  rdb.set("missions", missions);
   rdb.set("startdate", startdate);
   /**
   rdb.save().then((rdb) => {
@@ -202,6 +202,12 @@ function saveData(){
     }).catch((error) => {
       console.log(error);
     });
+}
+
+function UpdateData(){
+  const todo = AV.Object.createWithoutData("Todo", "582570f38ac247004f39c24b");
+todo.set("content", "这周周会改到周三下午三点。");
+todo.save();
 }
 
 
