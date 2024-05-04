@@ -871,7 +871,7 @@
 			}
 
 				#gallery_thumbnails article .thumbnail img {
-					display: block;
+					/*display:*/
 					width: 100%;
 				}
 
