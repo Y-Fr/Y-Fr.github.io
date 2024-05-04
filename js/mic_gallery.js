@@ -22,7 +22,7 @@ var gallery_main = (function($) { var _ = {
 			layoutDuration: 750,
 
 		// gallery_thumbnails per "row" (must match "misc.gallery_thumbnails-per-row" in _vars.scss).
-			gallery_thumbnailsPerRow: 2,
+			gallery_thumbnailsPerRow: 3,
 
 		// Side of gallery_main wrapper (must match "misc.gallery_main-side" in _vars.scss).
 			gallery_mainSide: 'right'
