@@ -168,7 +168,7 @@ function decrypt(encrypted) {
 }
 
 function decryptstr() {
-    let encrypted = document.getElementById("encrypted").value;
+    let encrypted = document.getElementById("encrypted_text").value;
     document.getElementById("decrypted").innerText = decrypt(encrypted);
 }
 
