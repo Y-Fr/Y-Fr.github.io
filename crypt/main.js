@@ -128,7 +128,7 @@ function encrypt(text, key) {
             }
             let fog = "";
             for(let j = 0; j < i + 2; j++) {
-                fog += generateRandomLetter(isOdd);
+                fog += generateRandomLetter(!isOddLetter(eLetter));
             }
             let idx = Math.floor(Math.random() * (i + 1));
             fog = fog.slice(0, idx) + eLetter + fog.slice(idx);

@@ -92,6 +92,13 @@
 
   
   <url>
+    <loc>https://y-fr.github.io/tags/helloworld/</loc>
+    <lastmod>2024-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://y-fr.github.io/tags/Test/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -100,13 +107,6 @@
   
   <url>
     <loc>https://y-fr.github.io/tags/%E6%97%85%E6%B8%B8/</loc>
-    <lastmod>2024-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://y-fr.github.io/tags/helloworld/</loc>
     <lastmod>2024-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
