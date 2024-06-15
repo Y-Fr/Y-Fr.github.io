@@ -122,9 +122,9 @@ function encrypt(text, key) {
             letter = letter.toLowerCase();
             let eLetter = "";
             if(isOddLetter(letter)) {
-                eLetter = String.fromCharCode((letter.charCodeAt() + key - 26) % 122);
+                eLetter = String.fromCharCode((letter.charCodeAt() + key - 26));
             } else {
-                eLetter = String.fromCharCode((letter.charCodeAt() - key + 26) % 122);
+                eLetter = String.fromCharCode((letter.charCodeAt() - key + 26));
             }
             let fog = "";
             for(let j = 0; j < i + 2; j++) {
@@ -160,8 +160,8 @@ function decrypt(encrypted) {
                 even += letter;
             }
         }
-        let d1 = odd.length > even.length ? odd : even;
-        let d2 = isOddLetter(d1) ? String.fromCharCode((d1.charCodeAt() - key + 26) % 122) : String.fromCharCode((d1.charCodeAt() + key) % 122);
+        let d1 = odd.length > even.length ? even : odd;
+        let d2 = isOddLetter(d1) ? String.fromCharCode((d1.charCodeAt() - key + 26)) : String.fromCharCode((d1.charCodeAt() + key));
         decrypted[i] = d2;
     }
     return decrypted.join("");
@@ -169,13 +169,13 @@ function decrypt(encrypted) {
 
 function decryptstr() {
     let encrypted = document.getElementById("encrypted").value;
-    document.getElementById("decrypted").value = decrypt(encrypted);
+    document.getElementById("decrypted").innerText = decrypt(encrypted);
 }
 
 function encryptstr() {
     let text = document.getElementById("text").value;
     let key = parseInt(document.getElementById("key").value);
-    document.getElementById("encrypted").value = encrypt(text, key);
+    document.getElementById("encrypted").innerText = encrypt(text, key);
 }
 
 
