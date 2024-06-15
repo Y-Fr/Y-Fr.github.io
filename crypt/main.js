@@ -122,9 +122,9 @@ function encrypt(text, key) {
             letter = letter.toLowerCase();
             let eLetter = "";
             if(isOddLetter(letter)) {
-                eLetter = String.fromCharCode((letter.charCodeAt() + key - 26));
+                eLetter = String.fromCharCode((letter.charCodeAt() + key - 26)%122);
             } else {
-                eLetter = String.fromCharCode((letter.charCodeAt() - key + 26));
+                eLetter = String.fromCharCode((letter.charCodeAt() - key + 26)%122);
             }
             let fog = "";
             for(let j = 0; j < i + 2; j++) {
@@ -161,7 +161,7 @@ function decrypt(encrypted) {
             }
         }
         let d1 = odd.length > even.length ? even : odd;
-        let d2 = isOddLetter(d1) ? String.fromCharCode((d1.charCodeAt() - key + 26)) : String.fromCharCode((d1.charCodeAt() + key));
+        let d2 = isOddLetter(d1) ? String.fromCharCode((d1.charCodeAt() - key + 26)%122) : String.fromCharCode((d1.charCodeAt() + key)%122);
         decrypted[i] = d2;
     }
     return decrypted.join("");
